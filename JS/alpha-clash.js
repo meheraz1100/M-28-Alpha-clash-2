@@ -11,6 +11,28 @@
 // }
 
 
+function handleKeyboardUpEvent(event){
+    const playerPressed = event.key;
+    console.log('Player Pressed', playerPressed);
+
+    //get the expected letter
+    const currentAlphabetElement = document.getElementById('current-alphabet');
+    const currentAlphabet = currentAlphabetElement.innerText;
+    console.log(playerPressed, currentAlphabet);
+}
+
+document.addEventListener('keyup', handleKeyboardUpEvent);
+
+
+
+// function handleKeyboardButtonPress(){
+//     console.log('key pressed');
+// }
+
+// //capture the key pressed
+// document.addEventListener('keyup', handleKeyboardButtonPress)
+
+
 function continueGame(){
     // step - 1  generate a random alphabet string
     const alphabet = getARandomAlphabet();
